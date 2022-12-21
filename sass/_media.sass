@@ -1,0 +1,323 @@
+@media (max-width: 1200px)
+	.menu
+		.menu_item
+			padding-right: 13px
+		.menu_link
+			font-size: 13px
+	.promo
+		.promo_header_text
+			font-size: 50px
+
+	.advantages
+		.advantages_block
+			align-items: flex-start
+			.advantages_descr
+				width: 300px
+	.mobile
+		&_item
+			width: 300px
+			&_subtitle
+				font-size: 22px
+	footer
+		.contact_blok > div
+			width: 50%
+			&:nth-child(1)
+				width: 25%
+			&:nth-child(3)
+				width: 25%
+				displey: flex
+				justify-content: flex-end
+			.platforms
+				display: flex
+				a
+					margin: 0 3px
+					img
+						width: 100%
+@media (max-width: 991px) //пишем не 992 , 991 потому что некоторые элементы могут конфликто себя вести при 992(см.табличные параметры в документации bootstrap)
+	.menu
+		.menu_item
+			padding-right: 8px
+		.menu_link
+			font-size: 10px
+	.subheader
+		.subheader_logo
+			img
+				width: 100%
+		.logo_text
+			font-size: 11px
+		.subheader_phone
+			font-size: 18px
+		.subheader_btn
+			margin-top: 21px
+			width: 100%
+			height: 40px
+	.promo
+		.promo_header_text
+			font-size: 40px
+		.promo_subheader_text
+			font-size: 30px
+
+	.advantages
+		.advantages_block
+			flex-direction: column
+			align-items: center
+			.advantages_descr
+				margin-top: 20px
+				width: 300px
+	.mobile
+		&_item
+			width: 300px
+			&_subtitle
+				font-size: 18px
+	
+	.choice
+		img
+			width: 100%
+	footer
+		.contact_blok
+			flex-wrap: wrap
+		.contact_blok > div
+			width: 100%
+			display: flex
+			justify-content: center
+			margin-bottom: 22px
+			&:nth-child(1)
+				width: 100%
+			&:nth-child(3)
+				width: 100%
+				justify-content: center
+
+@media (max-width: 767px)// * cм. вверх (768 пограничная точка)
+	.menu
+		position: fixed
+		flex-direction: column
+		display: flex
+		justify-content: center
+		align-items: center
+		top: 0
+		left:-100%
+		width: 50%
+		height: 100vh
+		padding: 20px 15px
+		background-color: rgba(0,0,0, .8)
+		transition: 0.6s all
+		.menu_link
+			font-size: 20px
+		.menu_item
+			border: none
+			padding-right: 0
+	.menu_active // подключили с помощью скрипта 
+			left: 0
+
+	.hamburger
+		display: block
+		position: absolute
+		top: 50%
+		right: 10px
+		transform: translateY(-50%)
+		width: 26px
+		height: 12px	
+		span
+			display: block
+			width: 100%
+			height: 2px
+			background-color: #fff
+			margin-bottom: 2px
+			transition: 0.6s all
+		&_active
+			span
+				margin-bottom: -2px	
+				&:nth-child(1)
+					transform: rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: rotate(45deg)
+	.subheader
+		.xs-hidden // блок в subheader скроется при данной ширине экрана 
+			display: none
+		.xs-visible // блок в subheader с ссылкой номера телефона поятся рядом с кнопкой вызова
+			display: block
+		.subheader_phone
+			display: block
+			margin-top: 10px
+			font-size: 16px
+			color: #ffffff
+			font-weight: 400
+			text-transform: uppercase
+			text-align: center
+		.subheader_btn
+			display: block
+			margin: 0 auto
+			width: 200px
+			height: 40px
+			margin-top: 10px
+	.promo
+		.promo_header_text
+			line-height: 45px
+
+//*
+
+@media ( max-width: 575px)
+	nav
+		height: 30px
+	header
+		height: 30px
+
+	.subheader
+		top: 30px
+		height: 60px
+		.logo_text
+			display: none
+		.subheader_logo
+			margin-top: 16px
+		.subheader_phone
+			margin-top: 11px
+			font-size: 12px
+			font-weight: 400
+			text-transform: uppercase
+		.subheader_btn
+			width: 110px
+			height: 22px
+			font-size: 9px
+			margin-top: 6px
+			&:hover
+				background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+	.promo
+		min-height: 400px
+		padding: 93px 0 35px 0
+		.promo_descr
+			display: none
+		.promo_header_text
+			font-size: 30px
+			padding: 0 24px
+			line-height: 35px
+		.promo_subheader_text
+			font-size: 20px
+			margin-top: 33px
+			padding: 0 10px
+			line-height: 30px
+		.promo_btn
+			width: 210px
+			height: 50px
+			margin-top: 72px
+			font-size: 16px
+			&:hover
+				background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+	.menu
+		width: 85%
+		.menu_item
+			width: 100%
+			text-align: center
+			padding: 5px 0
+		.menu_link
+			display: block
+			&:hover
+				&:after
+					width: 0%	
+
+		
+	.advantages
+		padding: 22px 0 36px 0 
+		.advantages_block
+			margin-top: 26px
+			.advantages_img
+				img
+					width: 100px
+					height: 100px
+			.advantages_descr
+				width: 100%
+				margin-top: 27px
+				.advantages_text
+					font-size: 16px
+	.title //ОБЩИЙ КЛАСС НА СТИЛИЗАЦИЮ ЗАГОЛОВКОВ 
+		font-size: 16px
+		margin-top: 15px
+		line-height: 16px
+
+	.mobile
+		padding: 22px 0 43px 0
+		&_item
+			width: 290px
+			height: 254px
+			padding-top: 80px	
+			&_nmb
+				margin-bottom: 0
+			&_subtitle
+				font-size: 18px
+		.row
+			margin-top: 30px
+		.subtitle
+			font-size: 14px
+			margin-top: 14px
+
+	.choice
+		min-height: 390px
+		padding: 24px 0 33px 0
+		background: url('../img/third_bg_mobile.jpg')
+		.title
+			display: none
+		.subtitle
+			display: none
+		.row
+			margin-top: 30px
+			h3
+				color: #ffffff
+	
+	.requier
+		padding: 25px 0 30px 0
+		&_block
+			margin: 26px 0
+			&_nmb
+				margin-bottom: 0px
+		&_title
+			font-size: 16px
+		&_list
+			margin-top: 10px
+			li
+				font-size: 14px
+				color: #222222
+				line-height: 18px
+		&_dscr
+			font-size: 14px
+		
+	.world
+		min-height: 360px
+		padding: 25px 0 32px 0
+		background: url('../img/bg_world_mobile.jpg') center center/cover no-repeat
+		.subtitle
+			font-size: 14px
+			margin-top: 14px
+			line-height: 10px
+	footer
+		min-height: 245px
+		padding: 24px 0 21px 0
+		.label_line
+			width: 253px
+		.contact_blok
+			padding-top: 22px
+		.contact_blok > div
+			margin-bottom: 20px
+			&:nth-child(1)
+				order: 2
+			&:nth-child(2)
+				order: 1
+			&:nth-child(3)
+				order: 3
+			.contact_header
+				width: 290px
+				&_link
+					font-size: 14px
+				&_sub
+					flex-wrap: wrap
+					justify-content: center
+					a
+						margin: 0 7px
+				&_lang
+					margin-top: 10px
+			
+
+
+
+
+
